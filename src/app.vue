@@ -1,0 +1,66 @@
+<template>
+<div>
+  {{msg}}
+</div>
+</template>
+<script>
+import pop from "./js/pop.js"
+export default {
+    name:"home",
+    data(){
+        return {
+            msg:"666"
+        }
+    },
+    mounted(){
+           this.go();
+       },
+   methods:{
+      go(){
+         new pop();
+        console.log(1111);
+      }
+   }
+}
+</script>
+<style>
+*{
+    padding:0;
+    margin:0;
+}
+.pop{
+    width:400px;
+    height:300px;
+    position:absolute;
+    left:300px;
+    top:200px;
+    border-radius:30px;
+    background:#ccc;
+    opacity:.5rem;
+}
+.pop-title{
+    text-align:center;
+    font-weight:500;
+    font-size:25px;
+    color:#000;
+   padding-top:20px;
+}
+.span{
+    position:absolute;
+    right:10px;
+    top:0;
+    color:red;
+}
+.pop-content{
+    text-align:center;
+    margin-top:30px;
+}
+button{
+    width:100px;
+    line-height:30px;
+    margin-left:150px;
+    margin-top:80px;
+    border-radius:40px;
+}
+
+</style>
